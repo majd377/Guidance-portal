@@ -293,11 +293,21 @@ footer a {
         padding: 40px 5%; 
     }
     .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
     .card img {
         height: 200px;
+    }
+    /* على الجوال: ضع بطاقة "آراء وأفكار" في الأعلى ووسّطها */
+    #starters .menu-grid .card:first-child {
+        order: -1;
+        max-width: 320px;
+        width: 100%;
+        align-self: center;
+        margin-bottom: 12px;
     }
     .contact-container {
         padding: 30px;
@@ -334,7 +344,9 @@ footer a {
         margin-bottom: 30px;
     }
     .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
     .card {
