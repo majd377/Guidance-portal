@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عــالمـ الإرشاد</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#"><img src="img/logo-restu.png" alt="Logo"></a>
+        </div>
+        <button class="menu-toggle" aria-label="قائمة التنقل">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#dishes">أهم المواضيع</a></li>
+                <li><a href="#ContactMe">قسم التواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>أهلاً بكم في عالم الإرشاد</h1>
+
+            <p>حيث الثقة والتوازن ونور الطريق</p>
+            <p>في رحلة الحياة، نحتاج دائماً إلى مرفأ آمن ومسارٍ يضيء لنا عتمة التساؤلات. هنا، في عالم الإرشاد ، نمدُّ لكم جسور الثقة لنعبر معاً نحو توازن النفس ورقيّ الفكر.</p>
+            
+            <div class="chef-box">
+                <img src="img/logo-restu.png" alt="الشيف" class="chef-img">
+                <p style="margin-top: 15px; font-weight: bold; color: var(--primary-color);">موجودون دائماً لسماعكم</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dishes">
+        <h1 class="section-title">المواضيع الرئيسية</h1>
+        <div class="menu-grid">
+            <div class="card">
+                <img src="img/logo-restu.png" alt="Pizza">
+                <div class="card-body">
+                    <button class="price-tag" onclick="window.open('about it.html', '_blank')">إلى</button>
+                    <h2>التعريف بالبرنامج</h2>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/logo-restu.png" alt="Burger">
+                <div class="card-body">
+                    <button class="price-tag" onclick="window.open('https:/teams.microsoft.com/l/meetup-join/19%3ameeting_ODU1NjJhNmMtY2YyNi00NWU4LWI5ODItNGY1YWM1ZDg1NmQx%40thread.v2/0?context=%7b%22Tid%22%3a%22ef26273c-14df-4441-95f2-5753024b16ba%22%2c%22Oid%22%3a%2287d8bb9b-02b9-43b2-99aa-7703c674abc3%22%7d', '_blank')">إلى</button>
+                    <h2>رابط حصة الإرشاد</h2>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/logo-restu.png" alt="Shawarma">
+                <div class="card-body">
+                    <button class="price-tag" onclick="window.open('what H.html', '_blank')">ما</button>
+                    <h2>يحدث بالإرشاد</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="starters" style="background-color: #151515;">
+        <h1 class="section-title">الفعاليات المميزة</h1>
+        <div class="menu-grid">
+            <div class="card">
+                <img src="img/logo-restu.png" alt="Pizza">
+                <div class="card-body">
+                    <button class="price-tag" onclick="window.open('https:/docs.google.com/forms/d/e/1FAIpQLSeM2P7zwGi9G3NuQdywtIiaZuqUh8HLZRWAtDcRtMATQvqYEA/viewform?usp=publish-editor', '_blank')">إلى</button>
+                    <h2>آراء وأفكار</h2>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/logo-restu.png" alt="Shawarma">
+                <div class="card-body">
+                    <button class="price-tag" onclick="window.open('https:/chat.whatsapp.com/DqOrg3s5B3UAaRTnoNl0Z7', '_blank')">إلى</button>
+                    <h2>مجموعة الفعاليات</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ContactMe">
+        <h1 class="section-title">تواصل معنا</h1>
+        <div class="contact-container">
+            <a href="https://wa.me/972597853311" class="contact-item" target="_blank">
+                <img src="img/phone.svg" alt="Email">
+                <h3>المرشدة التربوية : د.مها سلامة</h3>
+
+            </a>
+            <a href="https://wa.me/972567059705" class="contact-item" target="_blank">
+                <img src="img/phone.svg" alt="Phone">
+                <h3>مطور الموقع : مجد شبير</h3>
+
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Dev & designed by <a href="https://wa.me/972567059705">Majd.sh</a> &copy; 2026</p>
+    </footer>
+
+    <script>
+    // Mobile nav toggle
+    document.addEventListener('DOMContentLoaded', function(){
+        const btn = document.querySelector('.menu-toggle');
+        const header = document.querySelector('header');
+        btn.addEventListener('click', function(){
+            header.classList.toggle('open');
+            btn.setAttribute('aria-expanded', header.classList.contains('open'));
+        });
+    });
+    </script>
+</body>
+</html>
