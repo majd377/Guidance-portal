@@ -150,6 +150,19 @@ section {
     justify-items: center;
 }
 
+/* Make the three cards in the main topics section uniform size */
+#dishes .menu-grid {
+    justify-items: center;
+}
+#dishes .menu-grid .card {
+    width: 100%;
+    max-width: 260px;
+}
+#dishes .menu-grid .card img {
+    height: 200px; /* smaller image to match other sections */
+    object-fit: cover;
+}
+
 /* تصميم الكارت */
 .card {
     background-color: var(--card-bg);
@@ -301,13 +314,16 @@ footer a {
     .card img {
         height: 200px;
     }
-    /* على الجوال: ضع بطاقة "آراء وأفكار" في الأعلى ووسّطها */
-    #starters .menu-grid .card:first-child {
-        order: -1;
-        max-width: 320px;
+    /* على الجوال: اصغر بطاقات قسم الفعاليات لتطابق بعضها */
+    #starters .menu-grid .card {
         width: 100%;
+        max-width: 260px;
         align-self: center;
         margin-bottom: 12px;
+    }
+    /* احتفظ بتحريك العنصر الأول للأعلى */
+    #starters .menu-grid .card:first-child {
+        order: -1;
     }
     .contact-container {
         padding: 30px;
